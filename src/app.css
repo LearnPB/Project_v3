@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 240 10% 3.9%;
+
+		--muted: 240 4.8% 95.9%;
+		--muted-foreground: 240 3.8% 46.1%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 240 10% 3.9%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 240 10% 3.9%;
+
+		--border: 240 5.9% 90%;
+		--input: 240 5.9% 90%;
+
+		--primary: 240 5.9% 10%;
+		--primary-foreground: 0 0% 98%;
+
+		--secondary: 240 4.8% 95.9%;
+		--secondary-foreground: 240 5.9% 10%;
+
+		--accent: 240 4.8% 95.9%;
+		--accent-foreground: 240 5.9% 10%;
+
+		--destructive: 0 72.2% 50.6%;
+		--destructive-foreground: 0 0% 98%;
+
+		--ring: 240 10% 3.9%;
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--background: 240 10% 3.9%;
+		--foreground: 0 0% 98%;
+
+		--muted: 240 3.7% 15.9%;
+		--muted-foreground: 240 5% 64.9%;
+
+		--popover: 240 10% 3.9%;
+		--popover-foreground: 0 0% 98%;
+
+		--card: 240 10% 3.9%;
+		--card-foreground: 0 0% 98%;
+
+		--border: 240 3.7% 15.9%;
+		--input: 240 3.7% 15.9%;
+
+		--primary: 0 0% 98%;
+		--primary-foreground: 240 5.9% 10%;
+
+		--secondary: 240 3.7% 15.9%;
+		--secondary-foreground: 0 0% 98%;
+
+		--accent: 240 3.7% 15.9%;
+		--accent-foreground: 0 0% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
+
+		--ring: 240 4.9% 83.9%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+/* Reset basic styles and improve cross-browser consistency */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Set default font, background, and smooth font rendering */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+	background-color: #f6fcf6;
+	padding: 20px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	text-align: center;
+}
+
+/* Headings with consistent margin and improved accessibility */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0.5em;
+	font-weight: bold;
+	color: #222;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.75em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 1.25em;
+}
+
+h6 {
+	font-size: 1em;
+}
+
+/* Paragraphs with improved readability */
+p {
+	margin-bottom: 1em;
+	color: #444;
+}
+
+/* Links with focus state for better accessibility */
+a {
+	color: #0066cc;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+	color: #004a99;
+	text-decoration: underline;
+}
+
+/* Lists with consistent spacing */
+ul,
+ol {
+	margin-bottom: 1em;
+	padding-left: 1.5em;
+	list-style-position: inside;
+}
+
+ul li,
+ol li {
+	margin-bottom: 0.5em;
+}
+
+/* Buttons with base styles and focus state */
+button {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0.5em 1em;
+	border-radius: 4px;
+	transition: background-color 0.2s ease-in-out;
+}
+
+button:hover,
+button:focus {
+	background-color: #e6e6e6;
+}
+
+/* Improved input styles */
+input,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: transparent;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0.5em;
+	width: 100%;
+	box-sizing: border-box;
+	transition: border-color 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: #0066cc;
+	outline: none;
+}
+
+/* Ensure images are responsive */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Add basic styling for blockquotes */
+blockquote {
+	margin: 1em 0;
+	padding: 0.5em 1em;
+	background-color: #f9f9f9;
+	border-left: 4px solid #ccc;
+	color: #666;
+	font-style: italic;
+}
+
+/* Tables with basic styling */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+}
+
+th,
+td {
+	padding: 0.75em;
+	text-align: left;
+	border: 1px solid #ddd;
+}
+
+th {
+	background-color: #f6f6f6;
+	font-weight: bold;
+}
+
+/* Add basic styling for code blocks */
+code {
+	font-family: monospace;
+	background-color: #f9f9f9;
+	padding: 0.2em 0.4em;
+	border-radius: 4px;
+}
+
+/* Add basic styling for code blocks */
+pre {
+	background-color: #f9f9f9;
+	padding: 1em;
+	border-radius: 4px;
+	overflow-x: auto;
+}
